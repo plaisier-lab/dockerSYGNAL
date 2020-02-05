@@ -63,7 +63,7 @@ RUN pip install rpy2==2.8.6
     
 # Install R packages needed to run SYGNAL
 WORKDIR /
-RUN R -e "install.packages(c('getopt','GeneCycle','GeneNet','ggm','sem','e1071','MASS','matrixStats','gplots','BiocManager'), repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages(c('getopt','GeneCycle','GeneNet','ggm','sem','e1071','MASS','matrixStats','gplots','rjson','BiocManager'), repos = 'http://cran.us.r-project.org')"
 # Bioconductor packages (impute, topGO)
 RUN R -e "BiocManager::install(c('impute','topGO','preprocessCore','org.Hs.eg.db'))"
 RUN R -e "install.packages(c('WGCNA'), repos = 'http://cran.us.r-project.org')"
